@@ -1,4 +1,4 @@
-// <Lattice object of 17 atoms 68 concepts 11 coatoms at 0x1df62399208>
+// <Lattice object of 17 atoms 68 concepts 11 coatoms at 0x1df6241f780>
 digraph Lattice {
 	node [label="" shape=circle style=filled width=.25]
 	edge [dir=none labeldistance=1.5 minlen=2]
@@ -83,7 +83,7 @@ digraph Lattice {
 	c25 -> c25 [color=transparent headlabel=1270 labelangle=270]
 	c25 -> c14
 	c26
-	c26 -> c26 [color=transparent headlabel="X 4306" labelangle=270]
+	c26 -> c26 [color=transparent headlabel="1 4306" labelangle=270]
 	c26 -> c11
 	c27
 	c27 -> c27 [color=transparent headlabel=50 labelangle=270]
