@@ -1,4 +1,4 @@
-movieId,companies,director,genres,keywords,stars,title,writers,year
+id,companies,director,genres,keywords,stars,title,writers,year
 1,Pixar Animation Studios|Walt Disney Pictures,John Lasseter,Family|Fantasy|Comedy|Adventure|Animation,claw crane|toy|cgi animation|cowboy|rivalry,Don Rickles|Tim Allen|Tom Hanks,Toy Story,Pete Docter|John Lasseter,1995
 32,Atlas Entertainment|Universal Pictures|Classico,Terry Gilliam,Mystery|Thriller|Sci-Fi,mental institution|time travel|underground|psychiatrist|virus,Brad Pitt|Madeleine Stowe|Bruce Willis,Doce monos,Chris Marker|David Webb Peoples,1995
 47,New Line Cinema|Juno Pix|Cecchi Gori Pictures,David Fincher,Mystery|Thriller|Drama|Crime,human monster|serial murder|seven deadly sins|serial killer|psychological torture,Morgan Freeman|Brad Pitt|Kevin Spacey,Seven,Andrew Kevin Walker,1995

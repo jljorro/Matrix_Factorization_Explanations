@@ -1,0 +1,275 @@
+// <Lattice object of 17 atoms 68 concepts 11 coatoms at 0x1df62399208>
+digraph Lattice {
+	node [label="" shape=circle style=filled width=.25]
+	edge [dir=none labeldistance=1.5 minlen=2]
+	c0
+	c1
+	c1 -> c1 [color=transparent headlabel=32 labelangle=270]
+	c1 -> c0
+	c2
+	c2 -> c2 [color=transparent headlabel=110 labelangle=270]
+	c2 -> c0
+	c3
+	c3 -> c3 [color=transparent headlabel=150 labelangle=270]
+	c3 -> c0
+	c4
+	c4 -> c4 [color=transparent headlabel=356 labelangle=270]
+	c4 -> c0
+	c5
+	c5 -> c5 [color=transparent headlabel=364 labelangle=270]
+	c5 -> c0
+	c6
+	c6 -> c6 [color=transparent headlabel=377 labelangle=270]
+	c6 -> c0
+	c7
+	c7 -> c7 [color=transparent headlabel=380 labelangle=270]
+	c7 -> c0
+	c8
+	c8 -> c8 [color=transparent headlabel=457 labelangle=270]
+	c8 -> c0
+	c9
+	c9 -> c9 [color=transparent headlabel=480 labelangle=270]
+	c9 -> c0
+	c10
+	c10 -> c10 [color=transparent headlabel=500 labelangle=270]
+	c10 -> c0
+	c11
+	c11 -> c11 [color=transparent headlabel=588 labelangle=270]
+	c11 -> c0
+	c12
+	c12 -> c12 [color=transparent headlabel=590 labelangle=270]
+	c12 -> c12 [color=transparent labelangle=90 taillabel=Western]
+	c12 -> c0
+	c13
+	c13 -> c13 [color=transparent headlabel=1214 labelangle=270]
+	c13 -> c13 [color=transparent labelangle=90 taillabel=Horror]
+	c13 -> c0
+	c14
+	c14 -> c14 [color=transparent headlabel=1580 labelangle=270]
+	c14 -> c0
+	c15
+	c15 -> c15 [color=transparent headlabel=3578 labelangle=270]
+	c15 -> c0
+	c16
+	c16 -> c1
+	c16 -> c9
+	c17
+	c17 -> c1
+	c17 -> c14
+	c18
+	c18 -> c18 [color=transparent headlabel=47 labelangle=270]
+	c18 -> c8
+	c19
+	c19 -> c19 [color=transparent headlabel=527 labelangle=270]
+	c19 -> c19 [color=transparent labelangle=90 taillabel=Biography]
+	c19 -> c2
+	c20
+	c20 -> c20 [color=transparent headlabel=2028 labelangle=270]
+	c20 -> c20 [color=transparent labelangle=90 taillabel=War]
+	c20 -> c2
+	c21
+	c21 -> c5
+	c21 -> c10
+	c22
+	c22 -> c5
+	c22 -> c11
+	c23
+	c23 -> c23 [color=transparent headlabel=58559 labelangle=270]
+	c23 -> c8
+	c24
+	c24 -> c24 [color=transparent headlabel=595 labelangle=270]
+	c24 -> c11
+	c25
+	c25 -> c25 [color=transparent headlabel=1270 labelangle=270]
+	c25 -> c14
+	c26
+	c26 -> c26 [color=transparent headlabel="X 4306" labelangle=270]
+	c26 -> c11
+	c27
+	c27 -> c27 [color=transparent headlabel=50 labelangle=270]
+	c27 -> c18
+	c28
+	c28 -> c28 [color=transparent headlabel=2762 labelangle=270]
+	c28 -> c18
+	c29
+	c29 -> c29 [color=transparent labelangle=90 taillabel=History]
+	c29 -> c3
+	c29 -> c19
+	c30
+	c30 -> c30 [color=transparent headlabel="165 648" labelangle=270]
+	c30 -> c6
+	c31
+	c31 -> c31 [color=transparent headlabel="260 1196 1210" labelangle=270]
+	c31 -> c0
+	c32
+	c32 -> c32 [color=transparent labelangle=90 taillabel=Romance]
+	c32 -> c4
+	c32 -> c24
+	c33
+	c33 -> c33 [color=transparent labelangle=90 taillabel=Musical]
+	c33 -> c22
+	c33 -> c24
+	c34
+	c34 -> c6
+	c34 -> c23
+	c35
+	c35 -> c15
+	c35 -> c23
+	c36
+	c36 -> c36 [color=transparent headlabel="4993 5952 7153" labelangle=270]
+	c36 -> c0
+	c37
+	c37 -> c22
+	c37 -> c26
+	c38
+	c38 -> c38 [color=transparent headlabel=367 labelangle=270]
+	c38 -> c26
+	c39
+	c39 -> c10
+	c39 -> c26
+	c40
+	c40 -> c24
+	c40 -> c26
+	c41
+	c41 -> c9
+	c41 -> c30
+	c42
+	c42 -> c42 [color=transparent headlabel=780 labelangle=270]
+	c42 -> c31
+	c43
+	c43 -> c43 [color=transparent headlabel=6539 labelangle=270]
+	c43 -> c31
+	c44
+	c44 -> c44 [color=transparent labelangle=90 taillabel=Animation]
+	c44 -> c33
+	c44 -> c37
+	c44 -> c40
+	c45
+	c45 -> c25
+	c45 -> c26
+	c46
+	c46 -> c46 [color=transparent headlabel="593 608" labelangle=270]
+	c46 -> c18
+	c46 -> c23
+	c47
+	c47 -> c47 [color=transparent labelangle=90 taillabel=Family]
+	c47 -> c21
+	c47 -> c39
+	c47 -> c44
+	c48
+	c48 -> c48 [color=transparent headlabel=4226 labelangle=270]
+	c48 -> c1
+	c48 -> c27
+	c48 -> c28
+	c49
+	c49 -> c28
+	c49 -> c46
+	c50
+	c50 -> c50 [color=transparent headlabel="589 2571" labelangle=270]
+	c50 -> c42
+	c51
+	c51 -> c51 [color=transparent labelangle=90 taillabel=Mystery]
+	c51 -> c17
+	c51 -> c48
+	c52
+	c52 -> c27
+	c52 -> c34
+	c52 -> c46
+	c53
+	c53 -> c53 [color=transparent headlabel="296 858" labelangle=270]
+	c53 -> c46
+	c54
+	c54 -> c3
+	c54 -> c5
+	c54 -> c12
+	c54 -> c15
+	c54 -> c36
+	c55
+	c55 -> c55 [color=transparent headlabel=1036 labelangle=270]
+	c55 -> c7
+	c55 -> c30
+	c55 -> c34
+	c56
+	c56 -> c9
+	c56 -> c25
+	c56 -> c42
+	c57
+	c57 -> c57 [color=transparent headlabel=344 labelangle=270]
+	c57 -> c57 [color=transparent labelangle=90 taillabel=Comedy]
+	c57 -> c7
+	c57 -> c38
+	c57 -> c39
+	c57 -> c45
+	c58
+	c58 -> c58 [color=transparent labelangle=90 taillabel=Crime]
+	c58 -> c52
+	c58 -> c53
+	c59
+	c59 -> c26
+	c59 -> c36
+	c59 -> c43
+	c60
+	c60 -> c60 [color=transparent labelangle=90 taillabel="Sci-Fi"]
+	c60 -> c13
+	c60 -> c16
+	c60 -> c17
+	c60 -> c50
+	c60 -> c56
+	c61
+	c61 -> c61 [color=transparent headlabel="592 1198" labelangle=270]
+	c61 -> c15
+	c61 -> c30
+	c61 -> c42
+	c61 -> c43
+	c62
+	c62 -> c62 [color=transparent labelangle=90 taillabel=Fantasy]
+	c62 -> c38
+	c62 -> c40
+	c62 -> c59
+	c63
+	c63 -> c63 [color=transparent labelangle=90 taillabel=Thriller]
+	c63 -> c16
+	c63 -> c41
+	c63 -> c48
+	c63 -> c49
+	c63 -> c52
+	c63 -> c55
+	c64
+	c64 -> c64 [color=transparent labelangle=90 taillabel=Action]
+	c64 -> c35
+	c64 -> c50
+	c64 -> c55
+	c64 -> c61
+	c65
+	c65 -> c65 [color=transparent labelangle=90 taillabel=Adventure]
+	c65 -> c37
+	c65 -> c41
+	c65 -> c45
+	c65 -> c54
+	c65 -> c56
+	c65 -> c59
+	c65 -> c61
+	c66
+	c66 -> c66 [color=transparent headlabel="318 2858 2959" labelangle=270]
+	c66 -> c66 [color=transparent labelangle=90 taillabel=Drama]
+	c66 -> c4
+	c66 -> c20
+	c66 -> c21
+	c66 -> c29
+	c66 -> c35
+	c66 -> c49
+	c66 -> c53
+	c66 -> c54
+	c67
+	c67 -> c32
+	c67 -> c47
+	c67 -> c51
+	c67 -> c57
+	c67 -> c58
+	c67 -> c60
+	c67 -> c62
+	c67 -> c63
+	c67 -> c64
+	c67 -> c65
+	c67 -> c66
+}
