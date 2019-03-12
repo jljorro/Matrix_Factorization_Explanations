@@ -28,10 +28,12 @@ def calcular_reticulo(path, item_id, sim_items):
     movies_list = [item_id] + sim_items.tolist()
     df_movies = df_movies.loc[df_movies['id'].isin(movies_list)]
     
+    df_ids = df_movies['id']
+    
     # Ajusto la matriz para que sea utilizada por la libreria
     df_movies = df_movies.replace([0, 1], ['', 'X']) # reemplazar los 1, por las X
     
-    df_ids = df_movies['id']
+    df_movies = df_movies.drop(columns=['id'])
     
     # Esto lo hago para evitar que un id con valor igual a 1, se sustituya por una X
     column_names = ['id'] + df_movies.columns.tolist() 
