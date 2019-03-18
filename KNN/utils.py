@@ -43,7 +43,7 @@ def calculate_mean_ratings(sim_DF, test_movies, user, k):
     train_user_data = trainset_DF[trainset_DF.userId == user]
     
     # Get test data by user
-    testset_DF = pd.read_csv('data/experiment_data/testset.csv')
+    testset_DF = pd.read_csv('data/experiment_data/predicted_values.csv')
     test_user_data = testset_DF[testset_DF.userId == user]
 
     if len(test_user_data) > 0:
@@ -55,7 +55,7 @@ def calculate_mean_ratings(sim_DF, test_movies, user, k):
             predicted_ratings[test_movies[i]] = rating_predicted
 
         predicted_ratings_DF = pd.DataFrame.from_dict(predicted_ratings, orient='index')
-        predicted_ratings_DF['real_rating'] = test_user_data.rating.values    
+        predicted_ratings_DF['real_rating'] = test_user_data.predicted.values    
 
         # Calculamos la media de diferencias de cada rating
         predicted_ratings_DF['differences'] = predicted_ratings_DF.apply(lambda row: rating_dif(row), axis=1)
