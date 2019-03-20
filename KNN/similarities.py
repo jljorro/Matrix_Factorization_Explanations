@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 from scipy.spatial.distance import pdist, squareform
 from scipy.spatial.distance import euclidean, cosine, cityblock
@@ -30,14 +31,17 @@ def get_similarity_matrix(user, similarity_function):
 # solo contamos, para la similitud, las propiedades que tengan valor 1 en
 # alguno de los items.
 def equal_sim(item1, item2):
-    dif = 0
-    atr = 0
+    equ = np.sum(np.logical_and(item1, item2))
+    atr = np.sum(np.logical_or(item1, item2))
+    
+    ''' 
     for i in range(len(item1)):
         if item1[i] != item2[i]:
             dif = dif + 1
         if item1[i] == 1 or item2[i] == 1:
             atr = atr + 1
-    return float(atr - dif)/float(atr)
+    '''
+    return float(equ) / float(atr)
 
 
 def euclidean_sim(item1, item2):

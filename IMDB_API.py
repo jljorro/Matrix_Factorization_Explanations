@@ -6,8 +6,8 @@ from tqdm import tqdm
 base_url = 'https://www.imdb.com/title/tt'
 
 def get_title(text):
-    pattern = re.compile('(.*)(\s\(\d\d\d\d\))')
-    return pattern.search(text).group(1)
+    #pattern = re.compile('(.*)(\s\(\d\d\d\d\))')
+    return text#pattern.search(text).group(1)
 
 def is_genre(href):
     return href and "genres=" in href 
@@ -94,8 +94,8 @@ def procesaHTML(html, idMovie, url=""):
     """
     movie = {}
     movie['id'] = idMovie
-    movie['title'] = get_title(html.title.text)
-    movie['year'] = html.find('div', class_='title_wrapper').h1.a.text
+    movie['title'] = get_title(html.title.text)    
+    # movie['year'] = html.find('div', class_='title_wrapper').h1.a.text
     movie['genres'] = get_genres(html)
     movie['keywords'] = get_keywords(html)
     movie['director'] = get_director(html)
