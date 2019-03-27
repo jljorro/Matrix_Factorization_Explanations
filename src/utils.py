@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import statistics
+import math
 
 def rating_dif(row):
     """
@@ -8,7 +9,8 @@ def rating_dif(row):
         similares
     """
     #print(row)
-    differences = [(abs(row['real_rating'] - row[dim])) for dim in range(len(row) - 1)]
+    #differences = [(abs(row['real_rating'] - row[dim])) for dim in range(len(row) - 1)]
+    differences = [(row['real_rating'] - row[dim])**2 for dim in range(len(row) - 1)]
     #return statistics.mean(differences)
     return differences
 
@@ -18,7 +20,9 @@ def rating_mean(row):
     """
     #print(row['differences'])
     if 'differences' in row.index:
-        return statistics.mean(row['differences'])
+        sum_diff = np.sum(row['differences'])
+        return math.sqrt(sum_diff)
+        #return statistics.mean(row['differences'])
     else:
         return 0.0
 

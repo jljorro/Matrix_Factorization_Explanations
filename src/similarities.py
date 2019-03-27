@@ -5,11 +5,11 @@ from scipy.spatial.distance import pdist, squareform
 from scipy.spatial.distance import euclidean, cosine, cityblock
 
 
-def get_binary_similarity_matrix():
+def get_binary_similarity_matrix(function):
     binary_prop = pd.read_csv('data/experiment_data/movies_binary.csv')
     
     movies_prop = binary_prop.drop(columns=['id']).values
-    movies_sim_values = pdist(movies_prop, equal_sim)
+    movies_sim_values = pdist(movies_prop, function)
     movies_similarity = pd.DataFrame(squareform(movies_sim_values))
     
     return movies_similarity
@@ -41,7 +41,8 @@ def equal_sim(item1, item2):
         if item1[i] == 1 or item2[i] == 1:
             atr = atr + 1
     '''
-    return float(equ) / float(atr)
+    #return float(equ) / float(atr)
+    return cosine_sim(item1, item2)
 
 
 def euclidean_sim(item1, item2):

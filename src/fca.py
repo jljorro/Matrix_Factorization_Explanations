@@ -1,11 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[153]:
-
-
-from concepts import Context
+#from concepts import Context
+from lib.concepts import Context
 import pandas as pd
+import numpy as np
 
 
 # # Creación de un retículo a partir de una película y sus películas similares
@@ -25,7 +21,9 @@ def calcular_reticulo(path, item_id, sim_items):
     df_movies = pd.read_csv(path) # cargar el dataframe
     
     # Filtro la matriz para que solo aparezcan los items que nos interesan 
-    movies_list = [item_id] + sim_items.tolist()
+    #movies_list = [item_id] + sim_items.tolist()
+    movies_list = sim_items
+    movies_list.append(item_id)
     df_movies = df_movies.loc[df_movies['id'].isin(movies_list)]
     
     df_ids = df_movies['id']
@@ -49,6 +47,11 @@ def calcular_reticulo(path, item_id, sim_items):
     lat = r.lattice
     lat.graphviz(view=True)
 
+if __name__ == '__main__':
+    elemento_recomendado = 223
+    sim_elems = [66,127,36,155,99]
+    path = 'data/experiment_data/movies_binary.csv'
 
+    calcular_reticulo(path, elemento_recomendado, sim_elems)
 
 
