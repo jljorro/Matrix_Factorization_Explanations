@@ -6,6 +6,8 @@ import src.similarities as sim
 from scipy.spatial.distance import pdist, squareform
 
 import numpy as np
+import pandas as pd
+import concepts
 
 class NMF_XAI:
 
@@ -68,3 +70,38 @@ class NMF_XAI:
         movies_order = movies_order[:-1] # Remove the movie recommended
 
         return movies_preview[movies_order[:n]]
+    
+    def _get_dummie(self, df, column, sep):
+        new_df = df[column].str.get_dummies(sep=sep)
+        result = pd.concat([df, new_df], axis=1)        
+        #result.drop(columns=[column])
+        return result
+    
+    def _dataframe_to_context_matrix(self, lattice_movies):
+        # Generamos la matriz necesaria para concepts
+        lattice_movies['title_year'] = lattice_movies['title_year'].apply(lambda val: str(val)) # pasamos años a str
+        lista_columns = ['director_name', 'genres', 'stars', 'language', 'country', 'title_year']
+
+        for c in range(len(lista_columns)):
+            lattice_movies = self._get_dummie(lattice_movies, lista_columns[c], sep='|')
+
+        lista_columns_to_drop = ['director_name', 'genres', 'stars', 'language', 'country', 'title_year', 'movie_title', 'duration']
+        lattice_movies.drop(columns=lista_columns_to_drop, axis=1, inplace=True)
+
+        result = lattice_movies.replace([0, 1], ['', 'X'])
+        return result.set_index(['id'])
+    
+    def get_lattice(self, movie_recommended, examples):
+        lattice_ids = np.append(examples, movie_recommended)
+
+        # Obtengo las descripciones de las películas
+        lattice_val = self.movies_attr_df[self.movies_attr_df['id'].isin(lattice_ids)]
+
+        # Lo convierto a una matriz válida para concepts
+        lattice_val = self._dataframe_to_context_matrix(lattice_val)
+
+        objects = [str(x) for x in lattice_val.index.tolist()]
+        properties = list(lattice_val)
+        bools = list(lattice_val.fillna(False).astype(bool).itertuples(index=False, name=None))
+
+        return concepts.Context(objects, properties, bools)
